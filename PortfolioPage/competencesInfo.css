@@ -8,22 +8,20 @@
      --radius:20%;
 
      /*COLOURS*/
-     --yellow:rgb(221, 165, 9);
-     --green:rgb(72, 129, 11);
-     --blue:rgb(11, 104, 132);
-     --purple:#712f79;
-     --pink:rgb(164, 3, 111);
-     --light-charcoal:#555454;
+     --light-charcoal:rgb(85, 84, 84);
      --med-charcoal:rgb(59, 57, 57);
-     --red:#D81159;
-     --charcoal:rgb(24, 23, 23);
+     --blue:rgb(11, 104, 132);
+     --new-lightgreen:rgb(173, 202, 127);
+     --yellow:rgb(221, 165, 9);
+     --red:rgb(216, 17, 89);
+     --green:rgb(72, 129, 11);
+     --purple:rgb(113, 47, 121);
      --bgcolor:rgb(240, 230, 230);
-     --measure:red;
-     --new-orange:#D7680F; 
-     --new-lightgreen:#ADCA7F;
-     --new-turquoise:#1B7D73; 
-     --new-darkturquoise: #3F869E;
-     --new:#2B2D42;
+     --new-orange:rgb(215, 104, 15); 
+     --measure:rgb(255, 0, 0);
+     --new:rgb(45, 47, 75);
+     --base:rgb(197, 194, 194);
+
  
      /*FONTS*/
      --title-font:'Michroma', sans-serif;
@@ -33,6 +31,7 @@
        --h1:2rem;
        --h2:1.5rem;
        --h3:1.2rem;
+       --h4:0.9rem;
 
      /*li/a*/
      --font-size-li:1.2rem;
@@ -47,14 +46,13 @@ body{
        NAV AND FOOTER 
 ------------------------------------------------------------*/  
 header {
-    background-color: var(--blue);
+    background-color: var(--new);
     height: 6rem;
     width: 94vw;
     display: flex;
     justify-content: space-between;
     justify-content: flex-end;
     align-items: center;
-    font-size: 6vh;
     border-top-right-radius: 40px;  
     padding: 3vh;
     box-shadow: -1px 5px 15px 2px rgb(65, 63, 63);
@@ -64,15 +62,14 @@ header {
 li,a {
     list-style: none;
     display: inline;
-    font-family: var(--title-font);
+    font: var(--font-size-li) var(--title-font);
     color: var(--new-lightgreen);
-    font-size: var(--font-size-li);
 
    
 }
 
 footer{
-    background-color: var(--blue);
+    background-color: var(--new);
     height: 11vh;
     width: 97vw;
     margin-top: 5rem;
@@ -84,25 +81,22 @@ footer{
                HEADINGS 
 ------------------------------------------------------*/
 h1{
-    font-size: var(--h1);
-    font-family: var(--title-font);
-    color: var(--charcoal);
+    font:var(--h1)  var(--title-font);
+    color: var(--new);
     text-align: center;
    
 }
 
 h2,h3,h5{
-    font-family: var(--text-font);
-    color: var(--med-charcoal);
+    font:bold 1.5rem var(--text-font);
+    color: var(--new);
     text-align: center;
-    font-size: 1.5rem;
 
 }
 
 h4{
-    font-size: var(--h3);
-    font-family: var(--title-font);
-    color: var(--light-charcoal);
+    font:bold var(--h4) var(--title-font);
+    color: var(--new);
     text-align: center; 
 }
 
@@ -123,8 +117,8 @@ button{
     height: 6vh;
     border-radius: 10px;
     outline: none;
-    background-color: var(--blue);
-    color: var(--lightgreen);
+    background-color: var(--new);
+    color: var(--new-lightgreen);
     font-family: var(--text-font);
 }
 
@@ -142,7 +136,7 @@ button{
     }
 }
 
-.scale, .scale1{
+.scale{
     width:100vw;
     height: 100%;
     display: flex;
@@ -156,7 +150,7 @@ button{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(139, 139, 139);
+    background-color:var(--base);
     width: 40vw;
     height: 5vh;
     z-index: 0;
@@ -269,134 +263,17 @@ button{
     border-radius: 30rem;
     
 }
-/*--------------------------------
-     COLUMN RIGHT 
-----------------------------------*/
-/*Maquettage*/
-.scale1>div:nth-of-type(1)>div:only-child {
-    width: 30vw;
-    height: 5vh;
-    background-color:var(--purple);
-    z-index: 1;
-    border-radius: 30rem;
-    
-}
 
-/*uxui*/
-.scale1>div:nth-of-type(2)>div:only-child {
-    width: 38vw;
-    height: 5vh;
-    background-color:var(--green);
-    z-index: 1;
-    border-radius: 30rem;
-    
-}
-
-/*RESPOSIVITE*/
-.scale1>div:nth-of-type(3)>div:only-child {
-    width: 35vw;
-    height: 5vh;
-    background-color:var(--blue);
-    z-index: 1;
-    border-radius: 30rem;
-    
-}
-
-/*CHARTE GRAPHIQUE*/
-.scale1>div:nth-of-type(4)>div:only-child {
-    width: 35vw;
-    height: 5vh;
-    background-color:var(--yellow);
-    z-index: 1;
-    border-radius: 30rem;
-    
-}
-
-/*VSCODE*/
-.scale1>div:nth-of-type(5)>div:only-child {
-    width: 30vw;
-    height: 5vh;
-    background-color:var(--blue);
-    z-index: 1;
-    border-radius: 30rem;
-    
-    
-}
-
-/*GITHUB*/
-.scale1>div:nth-of-type(6)>div:only-child {
-    width: 10vw;
-    height: 5vh;
-    background-color:var(--red);
-    z-index: 1;
-    border-radius: 30rem;
-    
-}
-
-/*WORDPRESS*/
-.scale1>div:nth-of-type(7)>div:only-child {
-    width: 30vw;
-    height: 5vh;
-    background-color:var(--new-orange);
-    z-index: 1;
-    border-radius: 30rem;
-    
-}
-
-
-/*VUE*/
-.scale1>div:nth-of-type(8)>div:only-child {
-    width: 30vw;
-    height: 5vh;
-    background-color:var(--green);
-    z-index: 1;
-    border-radius: 30rem;
-   
-    
-}
-/*Angular*/
-.scale1>div:nth-of-type(9)>div:only-child{
+/*Symphony*/
+#loading>div:only-child{
     width: 100%;
     background-color: transparent;
-}
-/*TSSR*/
-.scale1>div:nth-of-type(9)>div>p:only-child {
-    text-align: center;
-    font-family: var(--text-font);
-    font-size: var(--placeholder-font-size);
-    color:var(--charcoal);
-    font-weight: 900;
-}
-/*LINUX*/
-.scale1>div:nth-of-type(10)>div:only-child {
-    width: 30vw;
-    height: 5vh;
-    background-color:var(--blue);
-    z-index: 1;
-    border-radius: 30rem;
-}
-/*VIRTUAL MACHINES  - DEBIAN/WINDOWS*/
-.scale1>div:nth-of-type(11)>div:only-child {
-    width: 30vw;
-    height: 5vh;
-    background-color:var(--pink);
-    z-index: 1;
-    border-radius: 30rem;
-}
-/*security application */
-.scale>h2{
-    font-family: var(--text-font);
-    color: var(--light-charcoal);
-    font-size: var(--placeholder-font-size);
-    text-align: left;
-}
-/*testing*/
-.scale1>h2{
-    font-family: var(--text-font);
-    color: var(--light-charcoal);
-    font-size: var(--placeholder-font-size);
-}
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font:italic bold var(--font-size-li) var(--text-font);
+ 
+} 
 
 /*-----------------------------------------------------
                 COMPETENCES PROFESSIONELLES
@@ -408,7 +285,6 @@ button{
     grid-template-rows: 1fr 1fr 1fr ;
     margin-top: 8vh;
     grid-gap: 4rem;
-  
 }
 
 @media only screen and (max-width: 1000px){
@@ -423,13 +299,14 @@ button{
 
 .comp_pro>li{
     justify-self: center;
-    font-size: var(--placeholder-font-size);
-    color: var(--charcoal)
+    font: var(--font-size-li) var(--text-font);
+    color: var(--new);
 }
 
 .comp_pro>li:nth-of-type(1){
     grid-column: 1;
     grid-row: 1;
+    text-align: center;
 }
 
 .comp_pro>li:nth-of-type(2){

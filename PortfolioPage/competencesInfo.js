@@ -1,21 +1,52 @@
+//----------------------------------------------------
+//       BUTTON TO RETURN TO TOP OF PAGE
+//----------------------------------------------------
+//recuperer l'element grace au dom
+const button = document.getElementById('top');
+//event listener qui gere le comportement d'un element 
+//selon l'action qui est declarer dans des paramettres de la function
+//dans ce cas la c'est un click
+
+button.addEventListener("click",function() {
+  //window gere des choses lié avec l'ecran et les sfunctionamlities visuel de site 
+  //scroll to me permet de changer la position de l'ecran
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    
+  });
+
+
 //---------------------------------------------------
 //      PROCESS BARS FOR EXPERIENCE
 //---------------------------------------------------
 
 /**HTML */
+//initilisation de boolean qui gere le demarrage
 let i=0;
 function html() {
+   //mettre le boolean en true pour demarrer aussi pour que je peux avoir un condition 
+    //dans mon if
   if (i==0) {
      i= 1;
+       //chercher l'element grace au dom
     let elem = document.getElementById("html")
+     //initialiser le width
     let width = 1;
+      //Gerer le temps qu'il prend de faire l'animation
+      //dans ce cas la tout arrive au meme moment donc la vitesse est geré
     let id = setInterval(frame, 20);
+    //function pour gerer l'arret de l'animation
     function frame() {
+      //width est ajouté par pourcentage donc quand il remplir 65% de parent il s'arrete
       if (width>65) {
+        //arret de setinterval
         clearInterval(id);
+        //retourner le boolean en false
         i = 0;
+        //si le boolean reste true je vais augmenter le width 1% par 1% jusqu'a il touche le
+        //limit definé dans la funciton frame() 
       } else {
         width++;
+        //ici je peux prendre vh, vw en gros tous les unitaires de css
         elem.style.width = width + "%"
       }
     }
@@ -25,6 +56,7 @@ html();
 
 
 /**css */
+
 let j = 0;
 function css() {
   if (j == 0) {
@@ -452,12 +484,5 @@ function testing() {
 testing();
 
 
-//----------------------------------------------------
-//       BUTTON TO RETURN TO TOP OF PAGE
-//----------------------------------------------------
-const button = document.getElementById('top');
 
-button.addEventListener("click",function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  });
 
