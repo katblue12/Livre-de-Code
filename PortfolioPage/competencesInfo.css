@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
 :root{
@@ -14,9 +13,10 @@
      --blue:rgb(11, 104, 132);
      --purple:#712f79;
      --pink:rgb(164, 3, 111);
-     --light-charcoal:rgb(116, 112, 112);
+     --light-charcoal:#555454;
+     --med-charcoal:rgb(59, 57, 57);
      --red:#D81159;
-     --charcoal:#202020;
+     --charcoal:rgb(24, 23, 23);
      --bgcolor:rgb(240, 230, 230);
      --measure:red;
      --new-orange:#D7680F; 
@@ -44,7 +44,7 @@ body{
     margin: 0;
 }
 /*----------------------------------------------------------
-       HEADINGS AND TEXT
+       NAV AND FOOTER 
 ------------------------------------------------------------*/  
 header {
     background-color: var(--blue);
@@ -52,6 +52,7 @@ header {
     width: 94vw;
     display: flex;
     justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     font-size: 6vh;
     border-top-right-radius: 40px;  
@@ -59,54 +60,15 @@ header {
     box-shadow: -1px 5px 15px 2px rgb(65, 63, 63);
     
 }
-/* 
-@media only screen and (max-width: 1000px){
-    header {
-        height: 9.8rem;
-        text-align:center;
-        padding: 2vw;
-        
-    }
-} */
-
-header>img:nth-child(1){
-    height: 6rem;
-    width: 5rem;
-    border-radius: 20%;
-    margin-left: 2vw;
-    box-shadow: -1px 5px 15px 2px rgb(32, 32, 32);
-    
-}
-
-
-header>ul>li>a>button{
-    background: transparent;
-    border:none;
-    font-size: var(--font-size-li);
-    font-family: var(--title-font);
-    font-weight: var(--font-weight-li);
-    color:var(--bgcolor);
-    height: fit-content;
-    
-}
-
 
 li,a {
     list-style: none;
     display: inline;
-    font-family: var(--text-font);
+    font-family: var(--title-font);
+    color: var(--new-lightgreen);
+    font-size: var(--font-size-li);
 
    
-}
-
-ul {
-    display: inline;
-    list-style-type: none;
-    margin-block-start: 0px;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px
 }
 
 footer{
@@ -118,62 +80,54 @@ footer{
     box-shadow: -1px 5px 15px 2px rgb(65, 63, 63);
 }
 
-
-h1{
-    /* font-size: var(--h1); */
-    font-family: var(--title-font);
-    color: var(--blue);
-    text-align: center;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-}
-
-h2,h3,h5{
-    font-family: var(--title-font);
-    color: var(--charcoal);
-    text-align: center;
-    margin: 0;
-
-}
-
-h4{
-    /* font-size: var(--h3); */
-    font-family: var(--text-font);
-    color: var(--light-charcoal);
-    text-align: center; 
-    font-style: italic;
-    margin-top:6vh;
-
-}
-
-
 /*-----------------------------------------------------
-               HEADINGS AND TEXT
+               HEADINGS 
 ------------------------------------------------------*/
 h1{
-    /* font-size: var(--h1); */
+    font-size: var(--h1);
     font-family: var(--title-font);
-    color: var(--light-charcoal);
+    color: var(--charcoal);
     text-align: center;
    
 }
 
 h2,h3,h5{
-    font-family: var(--title-font);
-    color: var(--charcoal);
+    font-family: var(--text-font);
+    color: var(--med-charcoal);
     text-align: center;
     font-size: 1.5rem;
 
 }
 
 h4{
-    /* font-size: var(--h3); */
+    font-size: var(--h3);
     font-family: var(--title-font);
     color: var(--light-charcoal);
     text-align: center; 
-    
-
 }
+
+/*-----------------------------------------------------
+               BUTTONS
+------------------------------------------------------*/
+
+.buttonBox{
+    margin-top: 5vh;
+    width: 90vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button{
+    height: 6vh;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--blue);
+    color: var(--lightgreen);
+    font-family: var(--text-font);
+}
+
 /*-----------------------------------------------------
                 COMPETENCES INFORMATIQUE
 ------------------------------------------------------*/
@@ -187,7 +141,6 @@ h4{
       flex-direction: column;
     }
 }
-
 
 .scale, .scale1{
     width:100vw;
@@ -212,7 +165,9 @@ h4{
    
 }
 
-
+/*---------------------------------------
+                COLUMN LEFT
+-----------------------------------------*/
 
 /*HTML*/
 .scale>div:nth-of-type(1)>div:only-child {
@@ -297,6 +252,26 @@ h4{
     
 }
 
+.scale>div:nth-of-type(10)>div:only-child {
+    width: 10vw;
+    height: 5vh;
+    background-color:var(--purple);
+    z-index: 1;
+    border-radius: 30rem;
+    
+}
+
+.scale>div:nth-of-type(11)>div:only-child {
+    width: 10vw;
+    height: 5vh;
+    background-color:var(--green);
+    z-index: 1;
+    border-radius: 30rem;
+    
+}
+/*--------------------------------
+     COLUMN RIGHT 
+----------------------------------*/
 /*Maquettage*/
 .scale1>div:nth-of-type(1)>div:only-child {
     width: 30vw;
@@ -408,25 +383,14 @@ h4{
     z-index: 1;
     border-radius: 30rem;
 }
-
-
-
-@media only screen and (max-width: 1000px){
-    .head_comp {
-        text-align:center;
-        font-size: var(--placeholder-font-size);
-        
-    }
-}
-
-
+/*security application */
 .scale>h2{
     font-family: var(--text-font);
     color: var(--light-charcoal);
     font-size: var(--placeholder-font-size);
     text-align: left;
 }
-
+/*testing*/
 .scale1>h2{
     font-family: var(--text-font);
     color: var(--light-charcoal);
@@ -518,39 +482,6 @@ h4{
     grid-row: 3;
   
 }
-
-.toTop{
-    width: 100vw;
-    height: 8vh;
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 10vh;
-    margin-top: 0;
-   
-}
-.toTop>button{
-    height:8vh;
-    width: 6vw;
-    background-color: var(--red);
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    margin: 10vh 6vw 0 0;
-    box-shadow: -1px 5px 15px 2px rgb(65, 63, 63);
-}
-
-.toTop>button{
-    color: var(--bgcolor);
-    font-family: var(--title-font);
-    font-weight: var(--font-weight-li);
-}
-
-
-
-
-
 
 
 

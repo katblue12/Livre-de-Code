@@ -52,9 +52,9 @@ function js() {
     k = 1;
     let elem = document.getElementById("js");
     let width = 1;
-    let id = setInterval(frame, 50);
+    let id = setInterval(frame, 35);
     function frame() {
-      if (width>30) {
+      if (width>35) {
         clearInterval(id);
         k = 0;
       } else {
@@ -73,9 +73,9 @@ function php() {
     l = 1;
     let elem = document.getElementById("php");
     let width = 1;
-    let id = setInterval(frame, 52);
+    let id = setInterval(frame, 35);
     function frame() {
-      if (width>25) {
+      if (width>35) {
         clearInterval(id);
         l = 0;
       } else {
@@ -409,6 +409,48 @@ function virtual() {
 };
 virtual();
 
+/**cyber secu*/
+let b = 0;
+function secu() {
+  if (b == 0) {
+    b = 1;
+    let elem = document.getElementById("secu");
+    let width = 1;
+    let id = setInterval(frame, 30);
+    function frame() {
+      if (width>30) {
+        clearInterval(id);
+        b = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+};
+secu();
+
+/**tests*/
+let c = 0;
+function testing() {
+  if (c == 0) {
+    c = 1;
+    let elem = document.getElementById("test");
+    let width = 1;
+    let id = setInterval(frame, 45);
+    function frame() {
+      if (width>20) {
+        clearInterval(id);
+        c = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+};
+testing();
+
 
 //----------------------------------------------------
 //       BUTTON TO RETURN TO TOP OF PAGE
@@ -417,5 +459,5 @@ const button = document.getElementById('top');
 
 button.addEventListener("click",function() {
     window.scrollTo({top: 0, behavior: 'smooth'});
-});
+  });
 
